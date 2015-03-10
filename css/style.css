@@ -1,0 +1,48 @@
+*{
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #F5F5F5;
+}
+
+header{
+  background-image: url("../assets/ño.jpg");
+  height: 300px;
+  /*hacemos que no se repita el fondo*/
+	background-repeat: no-repeat;
+	/*estira la imagen de fondo
+	preservando la relacion de aspecto
+	*/
+	background-size: cover;
+	/*centramos en el eje x y Y la imagen*/
+	background-position: bottom center;
+	background-attachment: fixed;
+}
+
+.main_container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  .article_container {
+    background-color: #FFFFFF;
+    text-align: justify;
+    width: 70%;
+    padding: 4rem;
+  }
+
+.main_footer {
+  padding: 4rem;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+  .section_footer {
+    width: 50%px;
+    justify-content: space-around;
+  }
