@@ -13,21 +13,24 @@
     <!-- Cabecera -->
     <header>
       <!-- Barra de navegación -->
-      <h1>Intro a Web</h1>
+      <h1>Introducción a Web</h1>
+    
+    </header>
+    <aside>
       <nav>
         <ul ng-model="selection">
-          <li ng-click = "cambiarSwitch('Inicio')"><a href="url">Inicio</a></li>
-          <li ng-click = "cambiarSwitch('About')"><a href="url">About</a></li>
-          <li ng-click = "cambiarSwitch('Contact')"><a href="url">Contact</a></li>
-          <li ng-click = "cambiarSwitch('Real')"><a href="url">Tiempo real</a></li>
+          <li ng-click = "cambiarSwitch('Inicio')"><a href="index.html">Inicio</a></li>
+          <li ng-click = "cambiarSwitch('About')"><a href="about.html">About</a></li>
+          <li ng-click = "cambiarSwitch('Contact')"><a href="contact.html">Contact</a></li>
+          <li ng-click = "cambiarSwitch('Real')"><a href="tiemporeal.html">Tiempo real</a></li>
         </ul>
       </nav>
-    </header>
+    </aside>
 
     <!--Algo de texto -->
     <section class="main_container">
       <article class="article_container">
-        <h1>Hola, mundo</h1>
+        <h2>Hola, mundo!!</h2>
         <p>Un lenguaje de programación es un lenguaje formal diseñado para expresar procesos
         que pueden ser llevados a cabo por máquinas como las computadoras.
         Pueden usarse para crear programas que controlen el comportamiento físico y lógico
@@ -43,7 +46,7 @@
             <source src="assets/nyan.ovg" type="video/ovg"/>
             <source src="assets/nyan.webm" type="video/webm"/>
             Tu navegador no soporta video nativo!
-				</video>
+        </video>
         </center>
       </article>
     </section>
@@ -63,17 +66,17 @@
     </footer>
   </body>
 
-  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-  	<script charset="utf-8">
-  		angular.module('switchExample', [])
-  			.controller('ExampleController', ['$scope', function($scope) {
-  			  $scope.items = ['Inicio', 'About', 'Contact', 'Real'];
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script charset="utf-8">
+      angular.module('switchExample', [])
+        .controller('ExampleController', ['$scope', function($scope) {
+          $scope.items = ['Inicio', 'About', 'Contact', 'Real'];
 
-  				$scope.cambiarSwitch = function (nombre) {
-  					$scope.seleccion = nombre;
-  				}
-  			}]);
+          $scope.cambiarSwitch = function (nombre) {
+            $scope.seleccion = nombre;
+          }
+        }]);
 
-  	</script>
+    </script>
 
 </html>
