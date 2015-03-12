@@ -14,43 +14,82 @@
     <header>
       <!-- Barra de navegación -->
       <h1>Introducción a Web</h1>
-    
+
     </header>
     <aside>
       <nav>
         <ul ng-model="selection">
-          <li ng-click = "cambiarSwitch('Inicio')"><a href="index.html">Inicio</a></li>
-          <li ng-click = "cambiarSwitch('About')"><a href="about.html">About</a></li>
-          <li ng-click = "cambiarSwitch('Contact')"><a href="contact.html">Contact</a></li>
-          <li ng-click = "cambiarSwitch('Real')"><a href="tiemporeal.html">Tiempo real</a></li>
+          <li ng-click = "cambiarSwitch('Inicio')">Inicio</a></li>
+          <li ng-click = "cambiarSwitch('About')">About</a></li>
+          <li ng-click = "cambiarSwitch('Contact')">Contact</a></li>
+          <li ng-click = "cambiarSwitch('Real')">Tiempo real</a></li>
         </ul>
       </nav>
     </aside>
 
     <!--Algo de texto -->
-    <section class="main_container">
-      <article class="article_container">
-        <h2>Hola, mundo!!</h2>
-        <p>Un lenguaje de programación es un lenguaje formal diseñado para expresar procesos
-        que pueden ser llevados a cabo por máquinas como las computadoras.
-        Pueden usarse para crear programas que controlen el comportamiento físico y lógico
-        de una máquina, para expresar algoritmos con precisión, o como modo de comunicación humana
-        Está formado por un conjunto de símbolos y reglas sintácticas y semánticas
-        que definen su estructura y el significado de sus elementos y expresiones.
-        Al proceso por el cual se escribe, se prueba, se depura, se compila (de ser necesario)
-        y se mantiene el código fuente de un programa informático se le llama programación.</p>
-        <br>
-        <center>
-          <video controls="controls" width="400">
-            <source src="assets/nyan.mp4" type="video/mp4"/>
-            <source src="assets/nyan.ovg" type="video/ovg"/>
-            <source src="assets/nyan.webm" type="video/webm"/>
-            Tu navegador no soporta video nativo!
-        </video>
-        </center>
-      </article>
-    </section>
+    <div ng-switch = 'seleccion'>
 
+      <div id = "inicio" ng-switch-default = 'Inicio' >
+        <section class="main_container">
+          <article class="article_container">
+            <h2>Hola, mundo!!</h2>
+            <p>Un lenguaje de programación es un lenguaje formal diseñado para expresar procesos
+            que pueden ser llevados a cabo por máquinas como las computadoras.
+            Pueden usarse para crear programas que controlen el comportamiento físico y lógico
+            de una máquina, para expresar algoritmos con precisión, o como modo de comunicación humana
+            Está formado por un conjunto de símbolos y reglas sintácticas y semánticas
+            que definen su estructura y el significado de sus elementos y expresiones.
+            Al proceso por el cual se escribe, se prueba, se depura, se compila (de ser necesario)
+            y se mantiene el código fuente de un programa informático se le llama programación.</p>
+            <br>
+            <center>
+              <video controls="controls" width="400">
+                <source src="assets/nyan.mp4" type="video/mp4"/>
+                <source src="assets/nyan.ovg" type="video/ovg"/>
+                <source src="assets/nyan.webm" type="video/webm"/>
+                Tu navegador no soporta video nativo!
+            </video>
+            </center>
+          </article>
+        </section>
+      </div> <!-- div inicio -->
+
+      <div id = "About" ng-switch-when = "About">
+        <section class="main_container">
+          <article class="article_container">
+            <h2>About!!!</h2>
+            <p>Camara!!!!</p>
+            <br>
+          </article>
+        </section>
+      </div> <!-- div About -->
+
+      <div id = "Contact" ng-switch-when = "Contact">
+        <section class="main_container">
+          <article class="article_container">
+            <h2>Contact!!!</h2>
+            <p>Camara!!!!</p>
+            <br>
+          </article>
+        </section>
+      </div> <!-- div About -->
+
+      <div id = "Real" ng-switch-when = "Real">
+        <section class="main_container">
+          <article class="article_container">
+          	<div>
+              <label>Name:</label>
+              <input type="text" ng-model="yourName" placeholder="Enter a name here">
+              <hr>
+              <h1>hola {{yourName}}!</h1>
+            </div>
+          </article>
+        </section>
+      </div> <!-- div About -->
+
+
+    </div>
     <!--Pie de página-->
     <footer class="main_footer">
       <section class="section_footer">
