@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html ng-app = 'switchExample' ng-controller = 'ExampleController'>
   <head>
     <!--Aquí va la configuración de la página -->
     <meta charset="UTF-8">
@@ -15,9 +15,11 @@
       <!-- Barra de navegación -->
       <h1>Intro a Web</h1>
       <nav>
-        <li><a href="url">Inicio</a></li>
-        <li><a href="url">About</a></li>
-        <li><a href="url">Contact</a></li>
+        <ul ng-model="selection">
+          <li ng-click = "cambiarSwitch('Inicio')"><a href="url">Inicio</a></li>
+          <li ng-click = "cambiarSwitch('About')"><a href="url">About</a></li>
+          <li ng-click = "cambiarSwitch('Contact')"><a href="url">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -59,4 +61,18 @@
       </section>
     </footer>
   </body>
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  	<script charset="utf-8">
+  		angular.module('switchExample', [])
+  			.controller('ExampleController', ['$scope', function($scope) {
+  			  $scope.items = ['Inicio', 'About', 'Contact'];
+
+  				$scope.cambiarSwitch = function (nombre) {
+  					$scope.seleccion = nombre;
+  				}
+  			}]);
+
+  	</script>
+
 </html>
