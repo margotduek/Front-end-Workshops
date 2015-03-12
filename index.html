@@ -19,6 +19,7 @@
           <li ng-click = "cambiarSwitch('Inicio')"><a href="url">Inicio</a></li>
           <li ng-click = "cambiarSwitch('About')"><a href="url">About</a></li>
           <li ng-click = "cambiarSwitch('Contact')"><a href="url">Contact</a></li>
+          <li ng-click = "cambiarSwitch('Real')"><a href="url">Tiempo real</a></li>
         </ul>
       </nav>
     </header>
@@ -66,7 +67,7 @@
   	<script charset="utf-8">
   		angular.module('switchExample', [])
   			.controller('ExampleController', ['$scope', function($scope) {
-  			  $scope.items = ['Inicio', 'About', 'Contact'];
+  			  $scope.items = ['Inicio', 'About', 'Contact', 'Real'];
 
   				$scope.cambiarSwitch = function (nombre) {
   					$scope.seleccion = nombre;
